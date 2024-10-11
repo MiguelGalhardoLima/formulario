@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="principal">
+        <h1>Formulário de Contato</h1>
+        <form class="formulario">
+            <div class="nome">
+                <label for="">Nome:</label>
+                <input id="nome" onblur="NomenaoFocado()" type="text" onfocus="NomeFocado()">
+                <p id="ErroNome"></p>
+            </div>
+            <div class="email">
+                <label for="">E-mail:</label>
+                <input id="email" onfocus="EmailFocado()" onblur="EmailNaoFocado()" type="text">
+                <p id="ErroEmail"></p>
+            </div>
+            <div class="mensagem">
+                <label for="">Mensagem:</label>
+                <textarea name="mensagem"  maxLength="250" onblur="MensagemNaoFocada()" onfocus="MensagemFocada()" id="mensagem"></textarea>
+                <p id="Ncharacter"></p>
+
+            </div>
+            
+        </form>
+        <button id="enviar">Enviar</button>
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>
